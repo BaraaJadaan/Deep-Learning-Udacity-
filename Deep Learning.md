@@ -279,15 +279,13 @@ $$
 ## Implementing Gradient Descent
 
 now we’ve been introduced to another kind of error formula it is the **Mean Squared Error** and it is given by the formula:
-$$
-
-$$
 
 $$
 E = \frac{1}{2m}\sum_{\mu} \sum_j \left[ y^{\mu}_j - \hat{y} ^{\mu}_j \right]^2
 $$
-
+$$
 where $\hat y$ is the prediction and $y$ is the true value, $j$ is the output unit. and $\mu$ is the data point.  $\hat y$ is given by the formula:
+$$
 $$
 \hat{y}^{\mu}_j = f \left( \sum_i{ w_{ij} x^{\mu}_i }\right)
 $$
