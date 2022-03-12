@@ -280,52 +280,36 @@ $$
 
 now we’ve been introduced to another kind of error formula it is the **Mean Squared Error** and it is given by the formula:
 
-$$
+
 E = \frac{1}{2m}\sum_{\mu} \sum_j \left[ y^{\mu}_j - \hat{y} ^{\mu}_j \right]^2
-$$
-$$
+
 where $\hat y$ is the prediction and $y$ is the true value, $j$ is the output unit. and $\mu$ is the data point.  $\hat y$ is given by the formula:
-$$
-$$
+
 \hat{y}^{\mu}_j = f \left( \sum_i{ w_{ij} x^{\mu}_i }\right)
-$$
 
-$$
-~~~~~~~~~~~~~w_i = w_i + Δ w_i\\[0.4em]
+w_i = w_i + Δ w_i\\[0.4em]
+Δ w_i = -∇\\[0.4em]
+Δ w_i=-\eta\frac{∂E}{∂w_i}\\[0.4em]
+\frac{∂E}{∂w_n}=-(y-\hat y) \frac{∂\hat y}{∂w_i}\\
+\hat y=f(h)  where  h=\sum_i w_ix_i
 
-~~~~~~~~~~~Δ w_i = -∇\\[0.4em]
- 
-~~~~~~~~~~~~Δ w_i=-\eta\frac{∂E}{∂w_i}\\[0.4em]
- 
-~~~~~~\frac{∂E}{∂w_n}=-(y-\hat y) \frac{∂\hat y}{∂w_i}\\
-\hat y=f(h) ~~~~~where ~~~~ h=\sum_i w_ix_i
-$$
-
-$ ~~~~~~~~~~~~ $     
-$$
 \frac{∂E}{∂w_n}=-(y-\hat y)f'(x)x_i
-$$
 
-$$
 Δ w_i=\eta(y-\hat y)f'(x)x_i
-$$
 
-$$
 \delta=(y-\hat y)f'(h)
-$$
 
-$$
 w_i=w_i+\eta~\delta~x_i
-$$
+
 
 If multiple output units:
-$$
+
 \delta_j=(y_j-\hat y_j)f'(h_j)
-$$
+
 **the Gradient descent step **:
-$$
+
 Δ w_{ij}=\eta~\delta_jx_i
-$$
+
 
 
  in the above equations $(y - \hat y)$ is the output error, $f'(h)$ refers to the derivative of the activation function $f(h)$,  $\eta$ is the learning rate, $\delta$ is the error term, and $Δ w_i$ is the weight change(weight step)
